@@ -23,7 +23,6 @@ class TicTacToeGame(Game):
     def getInitBoard(self):
         # return initial board (numpy board)
         b = Board(self.n)
-        print(b)
         return np.array(b.pieces)
 
     def getBoardSize(self):

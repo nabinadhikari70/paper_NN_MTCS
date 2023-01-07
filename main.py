@@ -22,7 +22,7 @@ args = dotdict({
     'maxlenOfQueue': 200000,
     'numMCTSSims': 25,          # Number of games moves for MCTS to simulate.
     # Number of games to play during arena play to determine if new net will be accepted.
-    'arenaCompare': 10,
+    'arenaCompare': 5,
     'cpuct': 1,
     'checkpoint': './temp/',
     'load_model': False,
@@ -34,7 +34,7 @@ args = dotdict({
 
 def main():
     log.info('Loading %s...', Game.__name__)
-    g = Game(6)
+    g = Game(3)
 
     log.info('Loading %s...', nn.__name__)
     nnet = nn(g)

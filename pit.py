@@ -30,7 +30,7 @@ n1 = NNet(g)
 # else:
 #     n1.load_checkpoint('./pretrained_models/othello/pytorch/',
 #                        '8x8_100checkpoints_best.pth.tar')
-n1.load_checkpoint('./temp/', 'best-25eps-25sim-10epch.pth.tar')
+n1.load_checkpoint('./temp/', 'best.h5')
 args1 = dotdict({'numMCTSSims': 50, 'cpuct': 1.0})
 mcts1 = MCTS(g, n1, args1)
 def n1p(x): return np.argmax(mcts1.getActionProb(x, temp=0))
